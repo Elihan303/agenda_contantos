@@ -2,7 +2,7 @@
 import './App.css';
 
 //Importar componentes
-import Formulario from './Formulario'
+import Formulario from './Componentes/Formulario'
 
 
 
