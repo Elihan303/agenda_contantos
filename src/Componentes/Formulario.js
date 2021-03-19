@@ -15,6 +15,9 @@ class Formulario extends React.Component {
     //      }
     //   document.getElementById('btn-enviar').addEventListener('click', AgregarContanto);
 
+    const f =()=>{
+        alert("Hola")
+    }
         
 
 
@@ -54,7 +57,7 @@ class Formulario extends React.Component {
                         </div>
                     </div>
 
-                    <button id="btn-enviar" className="btn_enviar ">Enviar</button>
+                    <button onClick={f}  className="btn_enviar ">Enviar</button>
                 </form>
             </div>
 

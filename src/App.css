@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+*{
+  color:aliceblue
+}
+body {
+  /* background: url('fondo.jpg'); */
+  background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   
+   justify-content: center;
+   align-items: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+  text-decoration: none;
+  color: rgb(224 43 43);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table thead tr{
+
+  background-color: rgb(18, 18, 18);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  position: relative;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
-  align-items: center;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgba(22, 22, 22, 0.911);
+  background-clip: border-box;
+  /* border: 1px solid rgba(0,0,0,.125); */
+  border-radius: 5px;
+}
+
+.generic{
+  margin-top: 3px;
+  padding: 30px 40px;
+  height: auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(21 21 23);
+  position: relative;
+  top: 21%;
+  left: 1%;
+  bottom: 15%;
+  padding-right: 86px;
+  border-radius: 12px;
+  width: 80%;
+  margin: 3%;
+  margin-inline: 140px;
+}
+.btn-secondary{
+  color: #fff;
+  background-color: #0a4272;
+  border-color: #6c757d;
 }
 
-.App-link {
-  color: #61dafb;
+.footer{
+
+width: 100%;
+background-color: rgb(22 23 27);
+display: flex;
+justify-content: center;
+padding: 15px;
+font-size: 20px;
+position: absolute;
+top: 120%;
+height: 9%;    
+}
+.footer_p{
+color: rgb(241, 230, 219);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.header__menu {
+display: flex;
+justify-content: space-between;
+width: 100%;
+align-items: center;
+padding: 0 10%
+
+
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #201f1f;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.bg-light {
+  background-color: #161718!important;
+}
+
+.header_nav_a{
+color: rgb(205, 219, 233);
+text-decoration: none;
+padding: 0.5rem	;
+font-weight: bold;
+font-family: 'open sans', sans-serif;   
+
+}
+
+
+h2{
+
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 45px
+}
+.header__nav_a:hover{
+transition: 150ms;
+border: 2px solid rgb(193, 197, 230);
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #1b1f22;
+}
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #161a1d;
+}
+.border {
+  border: 1px solid #1b1b1b!important;
+}
+.form-group{
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position:relative; 
+}
+.form-group label{
+ display: inline-block;
+ margin-bottom: 5px;
+ margin-left: 3px;
+}
+.form-group input{
+  border: 2px solid #3f3d3d;
+  display: block;
+  background-color: rgb(26, 25, 25);
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px; 
+  font-family: inherit;
+}
+.form-group.success input{
+  border-color: #19c776;
+  
+}
+
+
+.form-group.success i.fa-check-circle{
+ visibility: visible;
+ color: #19c776;
+  
+}
+
+.form-group.error input{
+  border-color: rgb(248, 72, 53);
+
+}
+.form-group.error small{
+  color: rgb(248, 72, 53);
+  visibility: visible;
+}
+.form-group.error i.fa-exclamation-circle{
+  visibility: visible;
+  color: rgb(248, 72, 53);
+   
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  background-color: rgb(19, 19, 19);
+}
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgb(18, 18, 18);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.form-group i{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+.form-group small{
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
