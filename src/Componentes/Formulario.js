@@ -1,5 +1,6 @@
 import React from 'react';
 import email_validation from './partials/validation'
+import setErrorFor from './partials/validation';
 import MaskedInput from 'react-text-mask';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -22,7 +23,7 @@ export default class Formulario extends React.Component {
 
         if(e.target.name == 'correo'){
             if(!email_validation(contenido_campo)){
-                alert('correo electronico no valido!')
+                setErrorFor(e.target, 'Correo Electronico no valido!')
             }
             else{
             }
