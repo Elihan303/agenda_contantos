@@ -21,7 +21,7 @@ class App extends React.Component {
 
     addContacto= (nombre,apellido,telefono,correo)=>{
         const nuevoContacto ={
-            id: this.state.contactos.length,
+            id: this.state.contactos.length +1 ,
             nombre: nombre,
             apellido: apellido,
             telefono:telefono,

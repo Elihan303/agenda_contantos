@@ -30,9 +30,7 @@ export default class Formulario extends React.Component {
     }
 
 
-    LimpiarInpunts=(e)=>{
-        e.target.value= "";
-    }
+  
     
 
     render() {
@@ -163,7 +161,7 @@ export default class Formulario extends React.Component {
                                         </tr>
                                     </thead>
                                     <tbody id='bodyDeTabla' >
-                                        {this.props.contactos.map(e => 
+                                        {this.props.contactos.map((e) => 
                                         <tr key={e.id}>
                                             <th scope="row">{e.id}</th>
                                             <td>
@@ -181,12 +179,11 @@ export default class Formulario extends React.Component {
                                             <td>
                                                 <button className="btn btn-success">Editar</button>
                                                 {"  "}
-                                                <button className="btn btn-danger" onClick={this.props.deleteContacto}>Eliminar</button>
+                                                <button className="btn btn-danger" onClick={this.props.deleteContacto.bind(this, e.id)}>Eliminar</button>
                                             </td>
                                         </tr>
                                         )
-                                        }
-                                       
+                                        }    
 
                                     </tbody>
 
