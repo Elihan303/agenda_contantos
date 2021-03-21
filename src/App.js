@@ -19,18 +19,29 @@ class App extends React.Component {
         contactos: contactos
     }
 
-    AddContacto= (nombre,apellido,telefono,correo)=>{
+    addContacto= (nombre,apellido,telefono,correo)=>{
         const nuevoContacto ={
+            id: this.state.contactos.length,
             nombre: nombre,
             apellido: apellido,
             telefono:telefono,
-            correo: correo,
-            id: this.state.contactos.length
+            correo: correo
+            
         }
         this.setState({
             contactos: [...this.state.contactos, nuevoContacto]
         })
     }
+    deleteContacto= (id) =>{
+        const newContacto=this.state.contactos.filter(contacto=> contacto.id !==id)
+        this.setState({
+            contactos: newContacto
+        })
+
+    }
+    updateContacto= () =>{}
+
+
 
 
 
@@ -38,9 +49,8 @@ render() {
   
   return (
       <div>
-      this
    
-      <Formulario addContactos={this.addContacto} contactos={this.state.contactos} />
+      <Formulario deleteContacto={this.deleteContacto} addContacto={this.addContacto} contactos={this.state.contactos} key = {contactos.id} />
       </div>
  
 

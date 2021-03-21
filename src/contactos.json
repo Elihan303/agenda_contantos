@@ -1,18 +1,12 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "nombre": "Policia",
         "apellido": "Nacional",
         "telefono": "8096549315",
         "correo": "policia@nacional.com"
-    },
-    {
-        "id": 2,
-        "nombre": "Seguridad",
-        "apellido": "Social",
-        "telefono": "809876123",
-        "correo": "seguridad@social.com"
     }
+
 
 
 ]

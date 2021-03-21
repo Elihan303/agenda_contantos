@@ -29,6 +29,10 @@ export default class Formulario extends React.Component {
         this.props.addContacto(this.state.nombre,this.setState.apellido,this.state.telefono,this.state.correo);
     }
 
+
+    LimpiarInpunts=(e)=>{
+        e.target.value= "";
+    }
     
 
     render() {
@@ -84,6 +88,7 @@ export default class Formulario extends React.Component {
                                                 name="nombre"
                                                 placeholder="nombre"
                                                 onChange={this.CaptureData}
+                                                value= {this.contactos}
                                             >
                                             </input>
                                             <i className="fas fa-check-circle"></i>
@@ -159,29 +164,29 @@ export default class Formulario extends React.Component {
                                     </thead>
                                     <tbody id='bodyDeTabla' >
                                         {this.props.contactos.map(e => 
-                                            <tr>
+                                        <tr key={e.id}>
                                             <th scope="row">{e.id}</th>
-                                            <th>
+                                            <td>
                                                 {e.nombre}
-                                            </th>
-                                            <th>
+                                            </td>
+                                            <td>
                                                 {e.apellido}
-                                            </th>
-                                            <th>
+                                            </td>
+                                            <td>
                                                 {e.telefono}
-                                            </th>
-                                            <th>
+                                            </td>
+                                            <td>
                                                 {e.correo}
-                                            </th>
-                                            <th>
-                                                <button className="btn btn-danger">Editar</button>
-                                                {"   "}
-                                                <button className="btn btn-success">Eliminar</button>
-                                            </th>
+                                            </td>
+                                            <td>
+                                                <button className="btn btn-success">Editar</button>
+                                                {"  "}
+                                                <button className="btn btn-danger" onClick={this.props.deleteContacto}>Eliminar</button>
+                                            </td>
                                         </tr>
                                         )
                                         }
-     )
+                                       
 
                                     </tbody>
 
