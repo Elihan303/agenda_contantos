@@ -1,4 +1,6 @@
 import React from 'react';
+import email_validation from './partials/validation'
+import MaskedInput from 'react-text-mask';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class Formulario extends React.Component {
@@ -13,13 +15,25 @@ export default class Formulario extends React.Component {
     }
 
     CaptureData = (e) => {
+        let campo = e.target.name;
+        let contenido_campo = e.target.value;
+
         console.log(e.target.name, e.target.value);
+
+        if(e.target.name == 'correo'){
+            if(!email_validation(contenido_campo)){
+                alert('correo electronico no valido!')
+            }
+            else{
+            }
+        }else{
+        }
+
+
         this.setState({
             [e.target.name]: e.target.value
 
         })
-
-
     }
     
 
@@ -111,14 +125,11 @@ export default class Formulario extends React.Component {
 
                                         <div className="form-group">
                                             <label >Numero de telefono</label>
-                                            <input type="text"
-                                                className="form-control"
-                                                id="telefono"
-                                                name="telefono"
-                                                placeholder="telefono"
-                                                onChange={this.CaptureData}
-                                            >
-                                            </input>
+                                            <MaskedInput type="text" className="form-control" id="telefono" name="telefono"
+                                            placeholder="telefono" onChange={this.CaptureData}
+                                            mask = {['(',/[0-9]/,/\d/,/\d/,')',' ',/\d/,/\d/,/\d/,'-',/\d/,/\d/,/\d/,/\d/]}
+                                            guide={true} showMask={true}/>
+                                          
                                             <i className="fas fa-check-circle"></i>
                                             <i className="fas fa-exclamation-circle"></i>
                                             <small>Error Message</small>
